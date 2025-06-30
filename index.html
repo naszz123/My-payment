@@ -21,7 +21,7 @@
       z-index: 0;
     }
     .container {
-  position: relative; /* dari absolute -> relative */
+  position: relative; 
   top: auto;
   left: auto;
   transform: none;
@@ -179,6 +179,18 @@
       font-size: 12px;
       color: #aaa;
     }
+    .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 40px auto;
+}
+.bottom-buttons {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
   </style>
 </head>
 <body>
@@ -193,9 +205,11 @@
   <button class="btn" onclick="showPopup('083847379417')">𝗚𝗢𝗣𝗔𝗬</button>
   <button class="btn" onclick="showQRPopup('qris.png')">𝗤𝗥𝗜𝗦</button>
   <button class="btn" onclick="showProductList()">𝗟𝗜𝗦𝗧 𝗣𝗥𝗢𝗗𝗨𝗞</button>
+  <div class="bottom-buttons">
   <button class="btn" onclick="window.open('https://wa.me/6283847379417', '_blank')">𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣</button>
   <button class="btn" onclick="window.open('https://t.me/Nasz_06', '_blank')">𝗖𝗢𝗡𝗧𝗔𝗖𝗞 𝗢𝗥𝗗𝗘𝗥 [ 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ]</button>
   <button class="btn" onclick="window.open('https://t.me/naszpukimax', '_blank')">𝗖𝗛 𝗧𝗘𝗟𝗘</button>
+</div>
   <footer>© Powered By Nasz</footer>
 </div><div class="popup-bg" id="popupBg">
   <div class="popup" id="popup">
