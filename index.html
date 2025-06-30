@@ -13,7 +13,6 @@
       background: #000;
       color: #fff;
       font-family: 'Segoe UI', sans-serif;
-      overflow: hidden;
     }
     .particles {
       position: fixed;
@@ -22,19 +21,20 @@
       z-index: 0;
     }
     .container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      border-radius: 25px;
-      box-shadow: 0 0 30px #0ff;
-      text-align: center;
-      width: 90%;
-      max-width: 400px;
-      z-index: 2;
-    }
+  position: relative; /* dari absolute -> relative */
+  top: auto;
+  left: auto;
+  transform: none;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 30px #0ff;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  z-index: 2;
+  margin: 50px auto;
+}
     .profile-img {
       width: 120px;
       height: 120px;
@@ -96,14 +96,17 @@
       align-items: center;
     }
     .popup {
-      background: #111;
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      width: 280px;
-      box-shadow: 0 0 30px #0ff;
-      position: relative;
-    }
+  background: #111;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 280px;
+  max-height: 90vh;
+  overflow-y: auto;  
+  box-shadow: 0 0 30px #0ff;
+  position: relative;
+}
     .popup img {
       max-width: 100%;
       margin-bottom: 15px;
@@ -189,6 +192,10 @@
   <button class="btn" onclick="showPopup('ᴛɪᴅᴀᴋ ᴛᴇʀsᴇᴅɪᴀ')">𝗢𝗩𝗢</button>
   <button class="btn" onclick="showPopup('083847379417')">𝗚𝗢𝗣𝗔𝗬</button>
   <button class="btn" onclick="showQRPopup('qris.png')">𝗤𝗥𝗜𝗦</button>
+  <button class="btn" onclick="showProductList()">𝗟𝗜𝗦𝗧 𝗣𝗥𝗢𝗗𝗨𝗞</button>
+  <button class="btn" onclick="window.open('https://wa.me/6283847379417', '_blank')">𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣</button>
+  <button class="btn" onclick="window.open('https://t.me/Nasz_06', '_blank')">𝗖𝗢𝗡𝗧𝗔𝗖𝗞 𝗢𝗥𝗗𝗘𝗥 [ 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 ]</button>
+  <button class="btn" onclick="window.open('https://t.me/naszpukimax', '_blank')">𝗖𝗛 𝗧𝗘𝗟𝗘</button>
   <footer>© Powered By Nasz</footer>
 </div><div class="popup-bg" id="popupBg">
   <div class="popup" id="popup">
@@ -218,6 +225,29 @@
       <img src="https://files.catbox.moe/mvwz69.jpg" alt="QRIS">
       <p style="color:#0ff">Screenshot Qris diatas untuk melanjutkan pembayaran</p>
     `;
+    document.getElementById('popupBg').style.display = 'flex';
+  }
+  
+  function showProductList() {
+    const content = `
+<pre style="color:#0ff; text-align:left;">
+- GET SC RESELLER PUKIMAX FULL UPDATE
+- GET SC VYROS FULL UPDATE
+- GET SC XMD INVASION FULL UPDATE
+- GET SC DRAGON
+- GET SADISTIC BELLARIC FULL UPDATE
+- GET FUNC YANG GW PUNYA
+- GET TUTOR PASANG FUNC
+- GET BASE BUG TELE
+- GET SC ADDTOKEN
+- GET TUTOR BUAT DATA BASE
+- GET SC ADD BYPAS
+- GET SC OBF
+- DI BANTU FIX SC KALO GW PAHAM
+- DLL
+</pre>
+`;
+    document.getElementById('popupContent').innerHTML = content;
     document.getElementById('popupBg').style.display = 'flex';
   }
 
